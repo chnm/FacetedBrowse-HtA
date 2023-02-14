@@ -2,6 +2,30 @@
 
 An [Omeka S](https://omeka.org/s/) module for faceted browsing.
 
+## Hearing the Americas modification
+
+This is a forked version of the [Faceted Browse module](https://omeka.org/s/docs/user-manual/modules/facetedbrowse/) for Omeka S and not intended for use beyond the [Hearing the Americas](https://hearingtheamericas.org) project. This fork adds a hero image and banner to the view to match the design of the website.
+
+The main edit with this fork is within the `view > faceted-browse > site > page > page.phtml` and includes the following snippet of HTML that appears above the existing `<div id="container">`: 
+
+```html
+<div class="assets hero-image-spins default">
+	<div class="asset">
+		<img src="https://hearingtheamericas.org/files/asset/17a1927e02e8206f3db241755d5c1b570c118740.png" alt="" />
+	</div>
+</div>
+
+<div class="div-banner" style="margin-top: -40px;">
+	<div class="spin-icon">
+		<img src="https://hearingtheamericas.org/files/asset/8eef2f04b3d1947e604dbf75c0d4d0dc1e777983.png">
+	</div>
+	<div class="spin-banner">
+		<h2>Artists</h2>
+		<p>Explore the artists of the early record business.</p>
+	</div>
+</div>
+```
+
 ## Developer documentation
 
 Modules can extend this module to add their own custom facets. To demonstrate this let's create a facet type named "My facet" that adds a way to filter by class. Filtering by class is already implemented in the "By class" facet type, but it serves as a good example of how to stitch the various parts together. First, register the facet type in your module's configuration.

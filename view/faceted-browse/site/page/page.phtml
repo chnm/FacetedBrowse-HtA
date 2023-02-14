@@ -16,6 +16,22 @@ if (1 === count($categories)) {
     $categoryQuery = $category->query();
 }
 ?>
+<!-- custom Hero image for Artists page -->
+<div class="assets hero-image-spins default">
+	<div class="asset">
+		<img src="https://hearingtheamericas.org/files/asset/17a1927e02e8206f3db241755d5c1b570c118740.png" alt="" />
+	</div>
+</div>
+
+<div class="div-banner" style="margin-top: -40px;">
+	<div class="spin-icon">
+		<img src="https://hearingtheamericas.org/files/asset/8eef2f04b3d1947e604dbf75c0d4d0dc1e777983.png">
+	</div>
+	<div class="spin-banner">
+		<h2>Artists</h2>
+		<p>Explore the artists of the early record business.</p>
+	</div>
+</div>
 <div id="container" 
     data-url-categories="<?php echo $this->escapeHtml($this->url(null, ['action' => 'categories'], true)); ?>"
     data-url-facets="<?php echo $this->escapeHtml($this->url(null, ['action' => 'facets'], true)); ?>"
